@@ -1,0 +1,1457 @@
+/* ==========================
+   ENAK'E TO LEE
+   DARK LUXURY PREMIUM
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0c0c0c;
+color:#ffffff;
+overflow-x:hidden;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+background:#d4af37;
+border-radius:30px;
+}
+
+/* GLOBAL */
+
+section{
+padding:120px 8%;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+ul{
+list-style:none;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title span{
+color:#d4af37;
+letter-spacing:4px;
+font-size:14px;
+font-weight:600;
+}
+
+.section-title h2{
+font-size:52px;
+margin-top:15px;
+font-weight:700;
+color:#f5f1e8;
+}
+
+/* BUTTONS */
+
+.btn-gold{
+display:inline-block;
+padding:16px 34px;
+background:#d4af37;
+color:#111;
+font-weight:700;
+border-radius:50px;
+transition:.4s;
+}
+
+.btn-gold:hover{
+background:#f4d36b;
+transform:translateY(-4px);
+box-shadow:0 15px 30px rgba(212,175,55,.25);
+}
+
+.btn-outline{
+display:inline-block;
+padding:15px 34px;
+border:2px solid #d4af37;
+color:#d4af37;
+border-radius:50px;
+font-weight:600;
+transition:.4s;
+}
+
+.btn-outline:hover{
+background:#d4af37;
+color:#111;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(16px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo h2{
+font-size:28px;
+font-weight:800;
+color:#d4af37;
+letter-spacing:2px;
+}
+
+.nav-links{
+display:flex;
+gap:42px;
+}
+
+.nav-links a{
+color:#f3efe5;
+font-weight:500;
+transition:.3s;
+position:relative;
+}
+
+.nav-links a:hover{
+color:#d4af37;
+}
+
+.nav-links a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-8px;
+width:0;
+height:2px;
+background:#d4af37;
+transition:.4s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.menu-toggle{
+display:none;
+font-size:30px;
+cursor:pointer;
+color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600')
+center/cover no-repeat;
+display:flex;
+align-items:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(
+rgba(0,0,0,.75),
+rgba(0,0,0,.88)
+);
+}
+
+.hero-content{
+position:relative;
+z-index:5;
+max-width:760px;
+}
+
+.premium-badge{
+display:inline-block;
+padding:12px 24px;
+background:rgba(212,175,55,.14);
+border:1px solid rgba(212,175,55,.35);
+color:#d4af37;
+border-radius:40px;
+margin-bottom:28px;
+}
+
+.hero h1{
+font-size:82px;
+line-height:1.1;
+margin-bottom:25px;
+font-weight:800;
+color:#f7f3ea;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.9;
+color:#d9d9d9;
+max-width:620px;
+margin-bottom:40px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+}
+
+/* BEST SELLER */
+
+.best-seller{
+background:#111111;
+}
+
+.seller-container{
+display:grid;
+grid-template-columns:repeat(
+auto-fit,
+minmax(320px,1fr)
+);
+gap:35px;
+}
+
+.seller-card{
+background:#181818;
+border-radius:24px;
+overflow:hidden;
+transition:.45s;
+border:1px solid rgba(255,255,255,.06);
+}
+
+.seller-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 40px rgba(0,0,0,.45);
+}
+
+.seller-card img{
+height:280px;
+object-fit:cover;
+}
+
+.seller-info{
+padding:28px;
+}
+
+.seller-info h3{
+font-size:26px;
+margin-bottom:14px;
+color:#f5f1e8;
+}
+
+.seller-info p{
+color:#bbbbbb;
+line-height:1.9;
+margin-bottom:22px;
+}
+
+.price{
+font-size:24px;
+font-weight:700;
+color:#d4af37;
+}
+
+/* MENU */
+
+.menu{
+background:#0f0f0f;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(
+auto-fit,
+minmax(300px,1fr)
+);
+gap:35px;
+}
+
+.menu-card{
+background:#181818;
+padding:45px;
+border-radius:26px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.menu-card:hover{
+transform:translateY(-8px);
+border-color:#d4af37;
+}
+
+.menu-card h3{
+font-size:30px;
+margin-bottom:32px;
+color:#d4af37;
+}
+
+.menu-card ul li{
+display:flex;
+justify-content:space-between;
+padding:16px 0;
+border-bottom:1px solid rgba(
+255,
+255,
+255,
+.08
+);
+font-size:17px;
+color:#f5f1e8;
+}
+
+.menu-card span{
+font-weight:700;
+color:#d4af37;
+}
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+
+.about{
+background:#141414;
+}
+
+.about-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.about-image{
+overflow:hidden;
+border-radius:30px;
+position:relative;
+}
+
+.about-image img{
+height:100%;
+object-fit:cover;
+border-radius:30px;
+transition:.6s;
+}
+
+.about-image:hover img{
+transform:scale(1.08);
+}
+
+.about-content span{
+color:#d4af37;
+letter-spacing:4px;
+font-size:14px;
+font-weight:600;
+}
+
+.about-content h2{
+font-size:58px;
+line-height:1.2;
+margin:22px 0 28px;
+color:#f7f3ea;
+}
+
+.about-content p{
+color:#cfcfcf;
+line-height:2;
+font-size:17px;
+margin-bottom:35px;
+}
+
+.about-features{
+display:flex;
+flex-direction:column;
+gap:25px;
+margin-bottom:40px;
+}
+
+.feature{
+display:flex;
+gap:22px;
+align-items:flex-start;
+padding:20px;
+background:#1b1b1b;
+border-radius:22px;
+border:1px solid rgba(255,255,255,.06);
+transition:.35s;
+}
+
+.feature:hover{
+transform:translateX(10px);
+border-color:#d4af37;
+}
+
+.feature i{
+font-size:28px;
+color:#d4af37;
+margin-top:4px;
+}
+
+.feature h4{
+font-size:20px;
+margin-bottom:8px;
+color:#f5f1e8;
+}
+
+.feature p{
+margin:0;
+font-size:15px;
+line-height:1.8;
+color:#bbbbbb;
+}
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery{
+background:#0d0d0d;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.gallery-item{
+overflow:hidden;
+border-radius:24px;
+position:relative;
+cursor:pointer;
+}
+
+.gallery-item img{
+height:320px;
+object-fit:cover;
+transition:.6s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.12);
+filter:brightness(.8);
+}
+
+.gallery-item::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(
+transparent,
+rgba(0,0,0,.45)
+);
+opacity:0;
+transition:.4s;
+}
+
+.gallery-item:hover::after{
+opacity:1;
+}
+
+/* ==========================
+   TESTIMONIAL
+========================== */
+
+.testimonial{
+background:#131313;
+}
+
+.testimonial-container{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.testimonial-card{
+background:#1b1b1b;
+padding:45px;
+border-radius:28px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.testimonial-card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+}
+
+.stars{
+color:#d4af37;
+font-size:22px;
+margin-bottom:24px;
+letter-spacing:3px;
+}
+
+.testimonial-card p{
+line-height:2;
+font-size:17px;
+color:#d8d8d8;
+margin-bottom:28px;
+}
+
+.testimonial-card h4{
+color:#f5f1e8;
+font-size:18px;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact{
+background:#0f0f0f;
+}
+
+.contact-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.contact-info span{
+color:#d4af37;
+letter-spacing:4px;
+font-size:14px;
+font-weight:600;
+}
+
+.contact-info h2{
+font-size:56px;
+margin:20px 0 24px;
+color:#f7f3ea;
+}
+
+.contact-info p{
+line-height:2;
+color:#cfcfcf;
+margin-bottom:30px;
+}
+
+.contact-item{
+display:flex;
+gap:18px;
+align-items:center;
+margin-bottom:24px;
+}
+
+.contact-item i{
+font-size:22px;
+color:#d4af37;
+width:35px;
+}
+
+.social-icons{
+display:flex;
+gap:18px;
+margin-top:35px;
+}
+
+.social-icons a{
+width:55px;
+height:55px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#181818;
+border-radius:50%;
+color:#d4af37;
+font-size:20px;
+transition:.35s;
+border:1px solid rgba(255,255,255,.06);
+}
+
+.social-icons a:hover{
+background:#d4af37;
+color:#111;
+transform:translateY(-6px);
+}
+
+.contact-form{
+background:#181818;
+padding:45px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-form form{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.contact-form input,
+.contact-form textarea{
+background:#111;
+border:none;
+outline:none;
+padding:20px 22px;
+border-radius:16px;
+color:#ffffff;
+font-size:16px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:#d4af37;
+}
+
+.contact-form textarea{
+resize:none;
+}
+
+/* ==========================
+   WHATSAPP FLOAT BUTTON
+========================== */
+
+.whatsapp-float{
+position:fixed;
+bottom:28px;
+right:28px;
+width:70px;
+height:70px;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:34px;
+color:#fff;
+z-index:999;
+box-shadow:0 15px 35px rgba(
+37,
+211,
+102,
+.35
+);
+transition:.35s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.12);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+background:#090909;
+padding:90px 8% 25px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:
+2fr 1fr 1fr;
+gap:60px;
+margin-bottom:50px;
+}
+
+.footer-brand h2{
+font-size:34px;
+color:#d4af37;
+margin-bottom:18px;
+}
+
+.footer-brand p{
+color:#bbbbbb;
+line-height:2;
+max-width:420px;
+}
+
+.footer-links h4,
+.footer-hours h4{
+margin-bottom:22px;
+color:#f5f1e8;
+font-size:22px;
+}
+
+.footer-links ul{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.footer-links a{
+color:#cfcfcf;
+transition:.3s;
+}
+
+.footer-links a:hover{
+color:#d4af37;
+padding-left:8px;
+}
+
+.footer-hours p{
+color:#bbbbbb;
+line-height:2;
+}
+
+.footer-bottom{
+padding-top:35px;
+border-top:1px solid rgba(
+255,
+255,
+255,
+.08
+);
+text-align:center;
+}
+
+.footer-bottom p{
+color:#888888;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Laptop Medium */
+
+@media (max-width:1200px){
+
+.hero h1{
+font-size:68px;
+}
+
+.section-title h2{
+font-size:46px;
+}
+
+.about-content h2,
+.contact-info h2{
+font-size:48px;
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+section{
+padding:100px 6%;
+}
+
+.navbar{
+padding:20px 6%;
+}
+
+.menu-toggle{
+display:block;
+z-index:1001;
+}
+
+.nav-links{
+position:absolute;
+top:100%;
+right:-100%;
+width:300px;
+height:auto;
+background:#111111;
+flex-direction:column;
+padding:35px;
+gap:28px;
+transition:.45s;
+border-left:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-links.active{
+right:0;
+}
+
+.hero{
+text-align:center;
+justify-content:center;
+}
+
+.hero-content{
+max-width:100%;
+}
+
+.hero h1{
+font-size:58px;
+}
+
+.hero p{
+margin:auto auto 40px;
+}
+
+.hero-buttons{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.about-container,
+.contact-container{
+grid-template-columns:1fr;
+}
+
+.about-image{
+order:-1;
+}
+
+.footer-container{
+grid-template-columns:1fr;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+section{
+padding:90px 22px;
+}
+
+.logo h2{
+font-size:22px;
+}
+
+.section-title{
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:38px;
+line-height:1.3;
+}
+
+.hero{
+height:auto;
+min-height:100vh;
+padding-top:120px;
+}
+
+.hero h1{
+font-size:46px;
+line-height:1.2;
+}
+
+.hero p{
+font-size:17px;
+line-height:1.8;
+}
+
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+gap:18px;
+}
+
+.btn-gold,
+.btn-outline{
+width:220px;
+text-align:center;
+}
+
+.seller-card img{
+height:240px;
+}
+
+.about-content h2,
+.contact-info h2{
+font-size:40px;
+}
+
+.menu-card{
+padding:35px;
+}
+
+.contact-form{
+padding:35px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:18px;
+}
+
+.whatsapp-float{
+width:62px;
+height:62px;
+font-size:30px;
+bottom:22px;
+right:22px;
+}
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.section-title h2{
+font-size:32px;
+}
+
+.about-content h2,
+.contact-info h2{
+font-size:32px;
+}
+
+.menu-card{
+padding:28px;
+}
+
+.menu-card h3{
+font-size:24px;
+}
+
+.seller-info h3{
+font-size:22px;
+}
+
+.footer-brand h2{
+font-size:28px;
+}
+
+}
+
+/* ==========================
+   ANIMATION EFFECTS
+========================== */
+
+.fade-up{
+opacity:0;
+transform:translateY(70px);
+transition:
+opacity .9s ease,
+transform .9s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.zoom-in{
+opacity:0;
+transform:scale(.85);
+transition:
+opacity .8s ease,
+transform .8s ease;
+}
+
+.zoom-in.show{
+opacity:1;
+transform:scale(1);
+}
+
+/* ==========================
+   GLASS EFFECT
+========================== */
+
+.glass{
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(14px);
+border:1px solid rgba(
+255,
+255,
+255,
+.08
+);
+}
+
+/* ==========================
+   EXTRA LUXURY HOVER
+========================== */
+
+.seller-card,
+.menu-card,
+.testimonial-card,
+.contact-form,
+.feature{
+will-change:transform;
+}
+
+.seller-card:hover,
+.menu-card:hover,
+.testimonial-card:hover{
+box-shadow:
+0 25px 50px rgba(
+0,
+0,
+0,
+.45
+);
+}
+
+/* GOLD TEXT SELECTION */
+
+::selection{
+background:#d4af37;
+color:#111111;
+}
+
+/* ==========================
+   SMOOTH APPEAR
+========================== */
+
+body{
+animation:
+pageLoad
+1s ease;
+}
+
+@keyframes pageLoad{
+
+from{
+opacity:0;
+transform:translateY(15px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ==========================
+   HERO LIGHT EFFECT
+========================== */
+
+.hero::before{
+content:'';
+position:absolute;
+top:-20%;
+left:-15%;
+width:500px;
+height:500px;
+background:radial-gradient(
+circle,
+rgba(212,175,55,.22),
+transparent 70%
+);
+filter:blur(90px);
+pointer-events:none;
+}
+
+/* ==========================
+   CARD GLOW EFFECT
+========================== */
+
+.menu-card:hover,
+.seller-card:hover{
+box-shadow:
+0 0 30px rgba(
+212,
+175,
+55,
+.10
+),
+0 0 60px rgba(
+212,
+175,
+55,
+.06
+);
+}
+
+/* ==========================
+   NAVBAR SCROLL EFFECT
+========================== */
+
+.navbar.scrolled{
+background:rgba(10,10,10,.92);
+box-shadow:
+0 10px 30px rgba(
+0,
+0,
+0,
+.35
+);
+}
+
+/* ==========================
+   FINAL POLISH
+========================== */
+
+html{
+overflow-x:hidden;
+}
+
+body{
+min-height:100vh;
+}
+
+// ==========================
+// ENAK'E TO LEE
+// DARK LUXURY PREMIUM
+// script.js
+// ==========================
+
+
+
+/* NAVBAR MOBILE */
+
+const menuToggle =
+document.querySelector(".menu-toggle");
+
+const navLinks =
+document.querySelector(".nav-links");
+
+menuToggle.addEventListener(
+"click",
+()=>{
+
+navLinks.classList.toggle("active");
+
+}
+);
+
+
+
+/* CLOSE MOBILE MENU */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
+link.addEventListener(
+"click",
+()=>{
+
+navLinks.classList.remove(
+"active"
+);
+
+});
+
+});
+
+
+
+/* NAVBAR SCROLL EFFECT */
+
+const navbar =
+document.querySelector(".navbar");
+
+window.addEventListener(
+"scroll",
+()=>{
+
+if(window.scrollY > 50){
+
+navbar.classList.add(
+"scrolled"
+);
+
+}else{
+
+navbar.classList.remove(
+"scrolled"
+);
+
+}
+
+}
+);
+
+
+
+/* SCROLL ANIMATION */
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add(
+"show"
+);
+
+}
+
+});
+
+},
+
+{
+threshold:0.15
+}
+
+);
+
+
+
+/* SELECT ELEMENTS */
+
+const animatedElements = [
+
+".hero-content",
+".seller-card",
+".menu-card",
+".about-image",
+".about-content",
+".gallery-item",
+".testimonial-card",
+".contact-info",
+".contact-form"
+
+];
+
+animatedElements.forEach(selector=>{
+
+document
+.querySelectorAll(selector)
+.forEach(el=>{
+
+if(
+selector === ".gallery-item"
+){
+
+el.classList.add(
+"zoom-in"
+);
+
+}else{
+
+el.classList.add(
+"fade-up"
+);
+
+}
+
+observer.observe(el);
+
+});
+
+});
+
+
+
+/* SMOOTH BUTTON HOVER */
+
+const buttons =
+document.querySelectorAll(
+".btn-gold,.btn-outline"
+);
+
+buttons.forEach(btn=>{
+
+btn.addEventListener(
+"mouseenter",
+()=>{
+
+btn.style.transform =
+"translateY(-5px) scale(1.02)";
+
+});
+
+btn.addEventListener(
+"mouseleave",
+()=>{
+
+btn.style.transform =
+"translateY(0) scale(1)";
+
+});
+
+});
+
+
+
+/* HERO PARALLAX */
+
+window.addEventListener(
+"scroll",
+()=>{
+
+const hero =
+document.querySelector(
+".hero"
+);
+
+let offset =
+window.pageYOffset;
+
+hero.style.backgroundPositionY =
+offset * 0.45 + "px";
+
+}
+);
+
+
+
+/* CONTACT FORM */
+
+const form =
+document.querySelector("form");
+
+if(form){
+
+form.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+alert(
+
+"Terima kasih! Pesan Anda berhasil dikirim ke ENAK'E TO LEE."
+
+);
+
+form.reset();
+
+}
+);
+
+}
+
+
+
+/* LOADING EFFECT */
+
+window.addEventListener(
+"load",
+()=>{
+
+document.body.style.opacity =
+"1";
+
+}
+);
+
+
+
+/* CURSOR GLOW EFFECT */
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+const glow =
+document.querySelector(
+".cursor-glow"
+);
+
+if(glow){
+
+glow.style.left =
+e.clientX + "px";
+
+glow.style.top =
+e.clientY + "px";
+
+}
+
+}
+);
+
+
+
+/* CREATE GLOW ELEMENT */
+
+const glowDiv =
+document.createElement("div");
+
+glowDiv.classList.add(
+"cursor-glow"
+);
+
+document.body.appendChild(
+glowDiv
+);
+
+
+
+/* GLOW STYLE */
+
+glowDiv.style.cssText = `
+
+position:fixed;
+width:280px;
+height:280px;
+border-radius:50%;
+background:
+radial-gradient(
+circle,
+rgba(212,175,55,.12),
+transparent 70%
+);
+pointer-events:none;
+transform:translate(-50%,-50%);
+z-index:0;
+filter:blur(40px);
+
+`;
+
+
+
+/* CONSOLE BRANDING */
+
+console.log(
+
+"%cENAK'E TO LEE — DARK LUXURY PREMIUM",
+
+"color:#d4af37; font-size:18px; font-weight:bold;"
+
+);
+
+console.log(
+
+"%cTradition Meets Modern Taste",
+
+"color:#ffffff; font-size:14px;"
+
+);
+
+
+
+/* PERFORMANCE SAFE */
+
+window.requestAnimationFrame(
+()=>{
+
+document.body.classList.add(
+"loaded"
+);
+
+});
